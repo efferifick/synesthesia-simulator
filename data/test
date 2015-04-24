@@ -1,4 +1,27 @@
-var paragraphs = document.getElementsByTagName("p");
-for (var i = 0; i < paragraphs.length; i++) {
-  console.log(paragraphs[i].innerHTML);
+
+function mustIgnore(str) {
+  return str == null || str.match(/^\s*$/) !== null;
+}
+
+var root = document.getElementsByTagName("body")[0];
+
+var walker = document.createTreeWalker(root, 
+                NodeFilter.SHOW_TEXT,
+                null,
+                false
+            );
+
+alert(walker.currentNode.tagName)
+
+while (walker.nextNode()) {
+  current = walker.currentNode
+
+  if (current.parentElement.tagName.toUpperCase() === "SCRIPT"
+    || current.parentElement.tagName.toUpperCase() === "NOSCRIPT")
+    continue;
+
+  if (mustIgnore(current.textContent))
+    continue;
+
+  alert(walker.currentNode.parentElement.tagName +" " + walker.currentNode.textContent);
 }

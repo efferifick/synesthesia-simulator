@@ -1,0 +1,98 @@
+/*.x21 {color: #;} /* ! */
+/*.x22 {color: #;} /* " */
+/*.x23 {color: #;} /* # */
+/*.x24 {color: #;} /* $ */
+/*.x25 {color: #;} /* % */
+/*.x26 {color: #;} /* & */
+/*.x27 {color: #;} /* ' */
+/*.x28 {color: #;} /* ( */
+/*.x29 {color: #;} /* ) */
+/*.x2a {color: #;} /* * */
+/*.x2b {color: #;} /* + */
+/*.x2c {color: #;} /* , */
+/*.x2d {color: #;} /* - */
+/*.x2e {color: #;} /* . */
+/*.x2f {color: #;} /* / */
+.x30 {color: #d9d9d9; text-shadow: 0 0 1px #262626;} /* 0 */
+.x31 {color: #ffd800; text-shadow: 0 0 1px #0027ff;} /* 1 */
+.x32 {color: #D00000; text-shadow: 0 0 1px #2fffff;} /* 2 */
+.x33 {color: #00bd00; text-shadow: 0 0 1px #ff42ff;} /* 3 */
+.x34 {color: #0069d6; text-shadow: 0 0 1px #ff9629;} /* 4 */
+.x35 {color: #fb6d01; text-shadow: 0 0 1px #0492fe;} /* 5 */
+.x36 {color: #af007b; text-shadow: 0 0 1px #50ff84;} /* 6 */
+.x37 {color: #646a00; text-shadow: 0 0 1px #9b96ff;} /* 7 */
+.x38 {color: #404040; text-shadow: 0 0 1px #bfbfbf;} /* 8 */
+.x39 {color: #56350c; text-shadow: 0 0 1px #a9caf3;} /* 9 */
+/*.x3a {color: #;} /* : */
+/*.x3b {color: #;} /* ; */
+/*.x3c {color: #;} /* < */
+/*.x3d {color: #;} /* = */
+/*.x3e {color: #;} /* > */
+/*.x3f {color: #;} /* ? */
+/*.x40 {color: #;} /* @ */
+.x41, .x61 {color: #ffd900; text-shadow: 0 0 1px #0026ff;} /* A */
+.x42, .x62 {color: #d00000; text-shadow: 0 0 1px #2fffff;} /* B */
+.x43, .x63 {color: #01be00; text-shadow: 0 0 1px #fe41ff;} /* C */
+.x44, .x64 {color: #0068d7; text-shadow: 0 0 1px #ff9728;} /* D */
+.x45, .x65 {color: #fb6e02; text-shadow: 0 0 1px #0491fd;} /* E */
+.x46, .x66 {color: #875733; text-shadow: 0 0 1px #78a8cc;} /* F */
+.x47, .x67 {color: #606500; text-shadow: 0 0 1px #9f9aff;} /* G */
+.x48, .x68 {color: #e06896; text-shadow: 0 0 1px #1f9769;} /* H */
+.x49, .x69 {color: #e6e6e6; text-shadow: 0 0 1px #191919;} /* I */
+.x4a, .x6a {color: #746353; text-shadow: 0 0 1px #8b9cac;} /* J */
+.x4b, .x6b {color: #813d00; text-shadow: 0 0 1px #7ec2ff;} /* K */
+.x4c, .x6c {color: #414141; text-shadow: 0 0 1px #bebebe;} /* L */
+.x4d, .x6d {color: #0000ea; text-shadow: 0 0 1px #ffff15;} /* M */
+.x4e, .x6e {color: #c40026; text-shadow: 0 0 1px #3bffd9;} /* N */
+.x4f, .x6f {color: #d8d8d8; text-shadow: 0 0 1px #272727;} /* O */
+.x50, .x70 {color: #66008c; text-shadow: 0 0 1px #99ff73;} /* P */
+.x51, .x71 {color: #56350c; text-shadow: 0 0 1px #a9caf3;} /* Q */
+.x52, .x72 {color: #0000ea; text-shadow: 0 0 1px #ffff15;} /* R */
+.x53, .x73 {color: #03511d; text-shadow: 0 0 1px #fcaee2;} /* S */
+.x54, .x74 {color: #000000; text-shadow: 0 0 1px #ffffff;} /* T */
+.x55, .x75 {color: #ec9cb7; text-shadow: 0 0 1px #136348;} /* U */
+.x56, .x76 {color: #563315; text-shadow: 0 0 1px #a9ccea;} /* V */
+.x57, .x77 {color: #00007b; text-shadow: 0 0 1px #ffff84;} /* W */
+.x58, .x78 {color: #573507; text-shadow: 0 0 1px #a8caf8;} /* X */
+.x59, .x79 {color: #f8f06b; text-shadow: 0 0 1px #070f94;} /* Y */
+.x5a, .x7a {color: #52360e; text-shadow: 0 0 1px #adc9f1;} /* Z */
+/*.x5b {color: #;} /* [ */
+/*.x5c {color: #;} /* \ */
+/*.x5d {color: #;} /* ] */
+/*.x5e {color: #;} /* ^ */
+/*.x5f {color: #;} /* _ */
+/*.x60 {color: #;} /* ` */
+/*.x61 {color: #;} /* a */
+/*.x62 {color: #;} /* b */
+/*.x63 {color: #;} /* c */
+/*.x64 {color: #;} /* d */
+/*.x65 {color: #;} /* e */
+/*.x66 {color: #;} /* f */
+/*.x67 {color: #;} /* g */
+/*.x68 {color: #;} /* h */
+/*.x69 {color: #;} /* i */
+/*.x6a {color: #;} /* j */
+/*.x6b {color: #;} /* k */
+/*.x6c {color: #;} /* l */
+/*.x6d {color: #;} /* m */
+/*.x6e {color: #;} /* n */
+/*.x6f {color: #;} /* o */
+/*.x70 {color: #;} /* p */
+/*.x71 {color: #;} /* q */
+/*.x72 {color: #;} /* r */
+/*.x73 {color: #;} /* s */
+/*.x74 {color: #;} /* t */
+/*.x75 {color: #;} /* u */
+/*.x76 {color: #;} /* v */
+/*.x77 {color: #;} /* w */
+/*.x78 {color: #;} /* x */
+/*.x79 {color: #;} /* y */
+/*.x7a {color: #;} /* z */
+/*.x7b {color: #;} /* { */
+/*.x7c {color: #;} /* | */
+/*.x7d {color: #;} /* } */
+/*.x7e {color: #;} /* ~ */
+
+li span .synsim {
+  display: inline;
+}

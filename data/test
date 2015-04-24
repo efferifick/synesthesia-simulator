@@ -1,6 +1,31 @@
-
 function mustIgnore(str) {
   return str == null || str.match(/^\s*$/) !== null;
+}
+
+function addClassToElement(element, theClass) {
+  element.className = theClass;
+}
+
+function wrapEachCharacter(textNode, tag) {
+  var text = textNode.nodeValue;
+  var parent = textNode.parentNode;
+  
+  var characters = text.split('');
+  var wrapped = document.createElement("span");
+  wrapped.style.display="inline";
+  addClassToElement(wrapped, "synsim");
+  characters.forEach( function(character) {
+    var element = document.createElement(tag);
+    element.style.display="inline";
+    var code = character.charCodeAt(0).toString(16);
+    addClassToElement(element, "x" + code);
+    var characterNode = document.createTextNode(character);
+    element.appendChild(characterNode);
+    wrapped.appendChild(element);
+  });
+
+  parent.replaceChild(wrapped, textNode);
+
 }
 
 var root = document.getElementsByTagName("body")[0];
@@ -10,18 +35,29 @@ var walker = document.createTreeWalker(root,
                 null,
                 false
             );
-
-alert(walker.currentNode.tagName)
+walker.nextNode();
+var old = walker.currentNode;
+var current = walker.currentNode;
 
 while (walker.nextNode()) {
   current = walker.currentNode
+  
 
-  if (current.parentElement.tagName.toUpperCase() === "SCRIPT"
-    || current.parentElement.tagName.toUpperCase() === "NOSCRIPT")
+  if (old.parentElement.tagName.toUpperCase() === "SCRIPT"
+    || old.parentElement.tagName.toUpperCase() === "NOSCRIPT") {
+    old = current;
     continue;
+  }
 
-  if (mustIgnore(current.textContent))
+  if (mustIgnore(old.textContent)) {
+    old = current;
     continue;
+  }
 
-  alert(walker.currentNode.parentElement.tagName +" " + walker.currentNode.textContent);
+
+  wrapEachCharacter(old, "span");
+
+  old = current;
+
 }
+

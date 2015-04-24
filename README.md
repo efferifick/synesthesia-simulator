@@ -11,7 +11,7 @@ It changes the colors of characters on web pages.
 
 Sure!
 
-![synesthesia](//TODO)
+![synesthesia](https://raw.githubusercontent.com/efferifick/synesthesia-simulator/master/img/example.png)
 
 ### Where can I get it?
 

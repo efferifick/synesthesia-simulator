@@ -28,7 +28,7 @@ function wrapEachCharacter(textNode, tag) {
 
 }
 
-var root = document.getElementsByTagName("body")[0];
+function walkElementNode(root) {
 
 var walker = document.createTreeWalker(root, 
                 NodeFilter.SHOW_TEXT,
@@ -41,23 +41,42 @@ var current = walker.currentNode;
 
 while (walker.nextNode()) {
   current = walker.currentNode
-  
-
   if (old.parentElement.tagName.toUpperCase() === "SCRIPT"
     || old.parentElement.tagName.toUpperCase() === "NOSCRIPT") {
     old = current;
     continue;
   }
-
   if (mustIgnore(old.textContent)) {
     old = current;
     continue;
   }
-
-
   wrapEachCharacter(old, "span");
-
   old = current;
-
+  }
 }
 
+var root = document.getElementsByTagName("body")[0];
+walkElementNode(root);
+
+var target = document.body;
+
+//create an observer
+var observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+
+    if (mutation.addedNodes.length === 0)
+      return false;
+
+    for (var i = 0; i < mutation.addedNodes.length; i++) {
+      if (mutation.addedNodes[i].nodeType === 1)
+        walkElementNode(mutation.addedNodes[i]);
+      else if (mutation.addedNodes[i].nodeType === 3)
+        wrapEachCharacter(mutation.addedNodes[i].nodeType, "span");
+    }
+  });
+});
+
+var config = { attributes: true, childList: true, characterData: true,
+subtree: true };
+
+observer.observe(target, config);

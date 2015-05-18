@@ -23,8 +23,7 @@ https://addons.mozilla.org/en-US/firefox/addon/synsim/
 
 No. We are literally changing the CSS. Making sure that all websites look the
 same as their originals with the exception of this added functionality depends
-on how other people coded their websites. So far, I've noted that there is no
-support for mutations in the DOM with AJAX and Google looks a bit weird.
+on how other people coded their websites.
 
 ### I like this, how can I help?
 
@@ -35,4 +34,3 @@ comfortable with them you can try to:
 * provide a nice gui for disabling websites or changing the styles
 * do you know of a style that doesn't make me dizzy? just make the changes!
 * fix so that it doesn't break major websites.
-* make it work with ajax!

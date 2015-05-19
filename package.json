@@ -1,9 +1,9 @@
 {
   "name": "synsim",
-  "title": "synsim",
+  "title": "Synesthesia Simulator",
   "id": "jid1-TjiytOB0WjWbXw",
-  "description": "a basic add-on",
-  "author": "",
+  "description": "Changes the color of characters according to a stylesheet to simulate synesthesia.",
+  "author": "Erick Ochoa",
   "license": "MPL 2.0",
-  "version": "0.1"
+  "version": "0.2"
 }

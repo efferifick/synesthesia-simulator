@@ -9,7 +9,7 @@ function addClassToElement(element, theClass) {
 function wrapEachCharacter(textNode, tag) {
   var text = textNode.nodeValue;
   var parent = textNode.parentNode;
-  
+
   var characters = text.split('');
   var wrapped = document.createElement("span");
   wrapped.style.display="inline";
@@ -30,7 +30,7 @@ function wrapEachCharacter(textNode, tag) {
 
 function walkElementNode(root) {
 
-var walker = document.createTreeWalker(root, 
+var walker = document.createTreeWalker(root,
                 NodeFilter.SHOW_TEXT,
                 null,
                 false

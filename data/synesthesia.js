@@ -2,7 +2,7 @@ function isNodeColorable(aNode) {
   if (aNode.parentElement.tagName.toUpperCase() == "SCRIPT"
       || aNode.parentElement.tagName.toUpperCase() == "NOSCRIPT" ) {
     return NodeFilter.FILTER_REJECT;
-  } else if (aNode.textContent === null || aNode.textContent.match(/^\s*$/) !== null) {
+  } else if (aNode.textContent == null || aNode.textContent.match(/^\s*$/) != null) {
     return NodeFilter.FILTER_REJECT;
   } else {
     return NodeFilter.FILTER_ACCEPT;
@@ -31,7 +31,7 @@ function colorNode(oldNode) {
 
 function colorTree(element) {
   var filter = { acceptNode: isNodeColorable };
-  var treeWalker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, filter, false);
+  var treeWalker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, filter, false);
   //we cannot change the node in which we are walking.
   //we need to walk the tree at least once to get a current node.
   treeWalker.nextNode();
@@ -54,12 +54,16 @@ function colorAJAX(changes) {
     });
 }
 
-var root = document.getElementsByTagName("body")[0];
-colorTree(root);
-var paintor = new MutationObserver(colorAJAX);
-var config = { attributes: true,
+
+function colorPage() {
+  colorTree(document.body);
+  var paintor = new MutationObserver(colorAJAX);
+  var config = { attributes: true,
                childList: true,
                characterData: true,
                subtree: true };
 
-paintor.observe(document.body, config);
+  paintor.observe(document.body, config);
+}
+
+colorPage();

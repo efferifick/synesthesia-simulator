@@ -1,7 +1,7 @@
 {
   "title": "Synesthesia Simulator",
   "name": "syn",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Simulates synesthesia on websites by adding a stylesheet.",
   "main": "index.js",
   "author": "Erick Ochoa",

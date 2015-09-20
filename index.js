@@ -3,8 +3,6 @@ var buttons = require('sdk/ui/button/action');
 var tabs = require('sdk/tabs');
 var pageMod = require("sdk/page-mod");
 var ss = require("sdk/simple-storage");
-const {Cu} = require("chrome");
-const {TextDecoder, TextEncoder, OS} = Cu.import("resource://gre/modules/osfile.jsm", {});
 
 // setup the ui
 var button = buttons.ActionButton({

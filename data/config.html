@@ -4,6 +4,20 @@
   <title>Synesthesia simulator</title>
 </head>
 <body>
-  <input type='file' id='cssfile'/>
+  <script>
+  // method is called fakeUpload because upload happens with conent-script
+  // this method only provides animation and instructions.
+  function fakeUpload() {
+    var div = document.getElementById('instructions');
+    if (div.style.display !== 'none') { div.style.display = 'none'; }
+    else { div.style.display = 'block'; }
+  }
+
+  </script>
+  <input type='file' id='cssfile' onchange='newCSS = true;'/>
+  <button type='button' id='fakeButton' onclick='fakeUpload()'>Submit</button>
+  <div id='instructions' style='display: none'>
+    Please restart your browser to see the effects.
+  </div>
 </body>
 </html>
